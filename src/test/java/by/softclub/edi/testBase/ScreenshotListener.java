@@ -1,11 +1,10 @@
-package testBase;
+package by.softclub.edi.testBase;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.annotations.Listeners;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
-import static testBase.TestBase.driver;
+import static by.softclub.edi.testBase.TestBase.driver;
 
 
 public class ScreenshotListener implements ITestListener {

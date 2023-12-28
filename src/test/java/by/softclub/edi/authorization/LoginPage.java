@@ -1,10 +1,10 @@
-package authorization;
+package by.softclub.edi.authorization;
 
-import authorization.implementation.Implementation;
+import by.softclub.edi.authorization.implementation.Implementation;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-import static testBase.Locators.getLocator;
+import static by.softclub.edi.testBase.Locators.getLocator;
 
 public class LoginPage extends Implementation {
 

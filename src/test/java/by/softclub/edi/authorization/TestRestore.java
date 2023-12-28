@@ -1,12 +1,7 @@
-package authorization;
+package by.softclub.edi.authorization;
 
 import io.qameta.allure.Description;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import testBase.Browser;
-import testBase.TestBase;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
+import by.softclub.edi.testBase.TestBase;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 

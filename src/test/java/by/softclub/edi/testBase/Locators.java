@@ -1,4 +1,4 @@
-package testBase;
+package by.softclub.edi.testBase;
 
 import org.openqa.selenium.By;
 import java.io.InputStream;

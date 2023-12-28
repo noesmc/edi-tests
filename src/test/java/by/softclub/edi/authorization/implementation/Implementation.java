@@ -1,9 +1,9 @@
-package authorization.implementation;
+package by.softclub.edi.authorization.implementation;
 
 import io.qameta.allure.Step;
 
-import static testBase.Locators.getLocator;
-import static testBase.TestBase.driver;
+import static by.softclub.edi.testBase.Locators.getLocator;
+import static by.softclub.edi.testBase.TestBase.driver;
 
 public abstract class Implementation {
 

@@ -1,4 +1,4 @@
-package testBase;
+package by.softclub.edi.testBase;
 
 public enum LocatorType {
     ID,

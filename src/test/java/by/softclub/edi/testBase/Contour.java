@@ -1,4 +1,4 @@
-package testBase;
+package by.softclub.edi.testBase;
 
 public enum Contour {
     DEV("http://192.168.194.14:10001/"),

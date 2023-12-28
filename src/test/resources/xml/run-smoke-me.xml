@@ -4,11 +4,11 @@
     <test name="Smoke">
         <groups>
             <run>
-                <include name="stt"/>
+                <include name="me"/>
             </run>
         </groups>
         <packages>
-            <package name="authorization">
+            <package name="by.softclub.*">
             </package>
         </packages>
     </test>
