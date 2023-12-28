@@ -18,7 +18,7 @@ public class LoginPage extends Implementation {
 
     @Step("Entering credentials, clicking login button")
     public void login(String username, String password) throws Exception {
-        LOG.info("Attempting to login with credentials:" + username + " " + password);
+        LOG.info("Attempting to login");
         driver.findElement(getLocator("loginPage.loginInput")).sendKeys(username);
         driver.findElement(getLocator("loginPage.passwordInput")).sendKeys(password);
         driver.findElement(getLocator("loginPage.loginButton")).click();
