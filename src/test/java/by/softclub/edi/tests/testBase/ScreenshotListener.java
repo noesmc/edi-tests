@@ -1,4 +1,4 @@
-package by.softclub.edi.testBase;
+package by.softclub.edi.tests.testBase;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
-import static by.softclub.edi.testBase.TestBase.driver;
+import static by.softclub.edi.tests.testBase.TestBase.driver;
 
 
 public class ScreenshotListener implements ITestListener {

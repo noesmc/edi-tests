@@ -1,11 +1,11 @@
-package by.softclub.edi.authorization.implementation;
+package by.softclub.edi.tests.implementation;
 
-import by.softclub.edi.authorization.LoginPage;
+import by.softclub.edi.pages.authorization.LoginPage;
 import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 
-import static by.softclub.edi.testBase.Locators.getLocator;
-import static by.softclub.edi.testBase.TestBase.driver;
+import static by.softclub.edi.tests.testBase.Locators.getLocator;
+import static by.softclub.edi.tests.testBase.TestBase.driver;
 
 public abstract class Implementation {
     Logger LOG = Logger.getLogger(LoginPage.class);

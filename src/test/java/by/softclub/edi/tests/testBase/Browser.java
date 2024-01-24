@@ -1,4 +1,4 @@
-package by.softclub.edi.testBase;
+package by.softclub.edi.tests.testBase;
 
 public enum Browser {
     CHROME,

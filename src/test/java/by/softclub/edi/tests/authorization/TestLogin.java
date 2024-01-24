@@ -1,12 +1,13 @@
-package by.softclub.edi.authorization;
+package by.softclub.edi.tests.authorization;
 
+import by.softclub.edi.pages.authorization.LoginPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import by.softclub.edi.testBase.TestBase;
+import by.softclub.edi.tests.testBase.TestBase;
 
 @Epic("Login")
 @Feature("Authorization")

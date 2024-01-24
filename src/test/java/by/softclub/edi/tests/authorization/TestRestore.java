@@ -1,7 +1,8 @@
-package by.softclub.edi.authorization;
+package by.softclub.edi.tests.authorization;
 
+import by.softclub.edi.pages.authorization.RestorePage;
 import io.qameta.allure.Description;
-import by.softclub.edi.testBase.TestBase;
+import by.softclub.edi.tests.testBase.TestBase;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 

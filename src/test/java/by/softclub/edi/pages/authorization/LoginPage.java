@@ -1,11 +1,11 @@
-package by.softclub.edi.authorization;
+package by.softclub.edi.pages.authorization;
 
-import by.softclub.edi.authorization.implementation.Implementation;
+import by.softclub.edi.tests.implementation.Implementation;
 import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-import static by.softclub.edi.testBase.Locators.getLocator;
+import static by.softclub.edi.tests.testBase.Locators.getLocator;
 
 public class LoginPage extends Implementation {
 
@@ -30,12 +30,4 @@ public class LoginPage extends Implementation {
         driver.findElement(getLocator("loginPage.changeVisibility")).click();
         LOG.info("Visibility has changed");
     }
-
-//    public String getText(String locator) throws Exception {
-//        return driver.findElement(getLocator(locator)).getText();
-//    }
-//
-//    public String getAttribute(String locator, String attribute) throws Exception {
-//        return driver.findElement(getLocator(locator)).getAttribute(attribute);
-//    }
 }
