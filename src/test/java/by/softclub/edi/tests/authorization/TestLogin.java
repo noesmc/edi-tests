@@ -26,7 +26,6 @@ public class TestLogin extends TestBase {
             "Введите логин");
         softAssert.assertEquals(loginPage.getAttribute("loginPage.passwordInput", "placeholder"),
             "Введите пароль");
-
         softAssert.assertEquals(loginPage.getText("loginPage.forgotPasswordButton"), "Забыли пароль?");
         softAssert.assertEquals(loginPage.getText("loginPage.loginButton"), "Войти");
         softAssert.assertAll();
@@ -39,10 +38,13 @@ public class TestLogin extends TestBase {
         LoginPage loginPage = new LoginPage(driver);
 
         softAssert.assertEquals(loginPage.getText("loginPage.changeVisibility"), "visibility");
+        softAssert.assertEquals(loginPage.getAttribute("loginPage.passwordInput", "type"),
+            "password");
         loginPage.changeVisibility();
         softAssert.assertEquals(loginPage.getText("loginPage.changeVisibility"), "visibility_off");
+        softAssert.assertEquals(loginPage.getAttribute("loginPage.passwordInput", "type"),
+            "text");
         softAssert.assertAll();
-
     }
 
     @Test(groups = {"stt", "bidmart", "me"})
@@ -51,7 +53,41 @@ public class TestLogin extends TestBase {
         LoginPage loginPage = new LoginPage(driver);
 
         loginPage.login("connector1", "1Qaz1Qaz");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getTitle(), "Заказы", "Authorization failed");
+    }
+
+    @Test(groups = {"stt", "bidmart", "me"})
+    @Description("Check existing notice about version update")
+    public void checkExistingNotice() throws Exception {
+        SoftAssert softAssert = new SoftAssert();
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.login("connector1", "1Qaz1Qaz");
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(), "Заказы", "Authorization failed");
+        softAssert.assertEquals(loginPage.getText("loginPage.headerText"), "Версия ПО обновлена.");
+        softAssert.assertEquals(loginPage.getText("loginPage.messageText"),
+            "Будут очищены временные файлы и файлы cookie.");
+        softAssert.assertAll();
+    }
+
+    @Test(groups = {"stt", "bidmart", "me"})
+    @Description("Logout")
+    public void logout() throws Exception {
+        SoftAssert softAssert = new SoftAssert();
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.login("connector1", "1Qaz1Qaz");
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(), "Заказы", "Authorization failed");
+        softAssert.assertEquals(loginPage.getText("loginPage.headerText"), "Версия ПО обновлена.");
+        softAssert.assertEquals(loginPage.getText("loginPage.messageText"),
+            "Будут очищены временные файлы и файлы cookie.");
+        loginPage.acceptUpdatingVersion();
+        Thread.sleep(1000);
+        loginPage.logout();
+        Assert.assertEquals(driver.getTitle(), "Bidmart EDI", "Failed");
+        softAssert.assertAll();
     }
 }

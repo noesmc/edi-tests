@@ -22,6 +22,7 @@ public class LoginPage extends Implementation {
         driver.findElement(getLocator("loginPage.loginInput")).sendKeys(username);
         driver.findElement(getLocator("loginPage.passwordInput")).sendKeys(password);
         driver.findElement(getLocator("loginPage.loginButton")).click();
+        LOG.info("Credentials have entered");
     }
 
     @Step("ChangeVisibility")
@@ -29,5 +30,18 @@ public class LoginPage extends Implementation {
         LOG.info("Changing text's visibility");
         driver.findElement(getLocator("loginPage.changeVisibility")).click();
         LOG.info("Visibility has changed");
+    }
+
+    @Step("Accept update")
+    public void acceptUpdatingVersion() throws Exception {
+        LOG.info("Click \"Accept\" button");
+        driver.findElement(getLocator("loginPage.acceptButton")).click();
+        LOG.info("\"Accept\" button has clicked");
+    }
+    @Step("Logout")
+    public void logout() throws Exception {
+        LOG.info("Click \"Logout\" button");
+        driver.findElement(getLocator("loginPage.logoutButton")).click();
+        LOG.info("\"Logout\" button has clicked");
     }
 }

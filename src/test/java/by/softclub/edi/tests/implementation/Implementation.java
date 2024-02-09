@@ -18,7 +18,7 @@ public abstract class Implementation {
 
     @Step("Getting web-element's attribute")
     public String getAttribute(String locator, String attribute) throws Exception {
-        LOG.info("Get attribute " + attribute + " of element");
+        LOG.info("Get attribute \"" + attribute + "\" of element");
         return driver.findElement(getLocator(locator)).getAttribute(attribute);
     }
 }
